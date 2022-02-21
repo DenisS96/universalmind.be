@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 60%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: linear-gradient(to right, rgba(64, 42, 145, 0.4), rgba(63, 49, 112, 0.4)), url(../img/color.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff; }
+
+.header {
+  background-color: #000;
+  height: 50vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 35vh, 0 100%);
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5);
+  position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: none;
+      clip-path: none; } }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  height: 20vh; }
+
+/*loader*/
+.loader {
+  background-color: #21133b;
+  position: fixed;
+  z-index: 5000;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  animation: load 5s ease; }
+  .loader__spin {
+    background-image: url(../img/yingyang.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 16px solid #d6a343;
+    border-top: 16px solid #21133b;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 5s; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+    visibility: visible; }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0; } }
+
+@keyframes load {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+  90% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.title {
+  text-align: center;
+  font-size: 7rem;
+  font-family: 'The Nautigal', cursive;
+  text-shadow: 0 1rem 1.2rem rgba(0, 0, 0, 0.4);
+  animation: appear 11s ease-in; }
+  .title__sub {
+    float: right;
+    margin-bottom: 2rem;
+    margin-right: 4%;
+    margin-top: 2%;
+    font-size: 2.5rem;
+    animation: moveInRight 8s 8s backwards; }
+  .title__sub2 {
+    margin-left: 20%;
+    font-family: 'The Nautigal', cursive;
+    text-align: center;
+    font-size: 3rem;
+    animation: appear 11s 5s ease-in backwards; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .4;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.voorstelling {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding-bottom: 10rem; }
+  .voorstelling__text {
+    font-size: 1.5rem;
+    padding: 5rem;
+    width: 60%;
+    background-image: linear-gradient(to right top, rgba(202, 68, 27, 0.6), rgba(62, 118, 170, 0.6)), url(../img/budha.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    opacity: .8;
+    box-shadow: 0 1rem 1.5rem rgba(36, 35, 35, 0.4);
+    border-radius: 100px; }
+    .voorstelling__text-img1 {
+      margin-left: -15rem;
+      background-image: linear-gradient(to right top, rgba(202, 68, 27, 0.6), rgba(62, 118, 170, 0.6)), url(../img/yingyang.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-size: 50%;
+      margin-bottom: 5rem; }
+    .voorstelling__text-img2 {
+      margin-left: 15rem;
+      background-image: linear-gradient(to right top, rgba(202, 68, 27, 0.6), rgba(62, 118, 170, 0.6)), url(../img/shrishantra.jpg);
+      background-size: 70%;
+      margin-bottom: 5rem; }
+    .voorstelling__text-img3 {
+      margin-left: -15rem;
+      background-image: linear-gradient(to right top, rgba(202, 68, 27, 0.6), rgba(62, 118, 170, 0.6)), url(../img/olifant.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-size: 70%;
+      margin-bottom: 5rem; }
+
+.theway {
+  float: right; }
+
+/*formulier*/
+.afspraak__form {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center; }
+  .afspraak__form-invoer {
+    color: #460683;
+    padding-left: 1.5rem;
+    width: 50%;
+    height: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-bottom: 1px solid #fff; }
+  .afspraak__form-invoer:focus {
+    background-color: rgba(255, 255, 255, 0.5); }
+  .afspraak__form-text {
+    font-size: 1.5rem; }
+
+.btn {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all .4s;
+  text-transform: uppercase; }
+  .btn:hover {
+    transform: scale(1.1); }
+
+/*navigatie*/
+.nav__list {
+  display: flex;
+  justify-content: center; }
+
+.nav__item {
+  margin-left: 3rem;
+  list-style: none;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px dotted;
+  cursor: pointer; }
+  .nav__item:hover {
+    border-radius: 3px;
+    background-image: linear-gradient(to right, rgba(64, 42, 145, 0.2), rgba(63, 49, 112, 0.2)); }
+
+.nav__link {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none; }
+
+/*contact*/
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20rem;
+  margin-bottom: 2rem; }
+  .contact__adres {
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    background-image: linear-gradient(to right, rgba(64, 42, 145, 0.1), rgba(63, 49, 112, 0.1));
+    padding: 5rem;
+    width: 20%; }
+
+.copyright {
+  padding-top: 7%; }
+
+/* styling*/
+.heading3 {
+  margin-bottom: 8rem;
+  font-size: 7rem;
+  font-family: 'The Nautigal', cursive;
+  margin-left: -60%; }
+
+.heading4 {
+  margin-bottom: 8rem;
+  margin-left: -70%;
+  font-size: 7rem;
+  font-family: 'The Nautigal', cursive; }
+
+.line {
+  color: grey;
+  margin-top: 10rem;
+  transform: skewY(-2deg);
+  height: 1px; }
+
+@keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
