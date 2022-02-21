@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-widht, initial-scale-1.0">
 
@@ -15,6 +15,9 @@
 
 
 <body>
+    <div class="loader">
+        <div class="loader__spin"></div>
+    </div>
 <!--header-->
 <header class="header">
 <h1 class="title">Universal Mind</h1>
@@ -30,10 +33,12 @@
 
 <!--main-->
 <main class="main">
+ 
  <br><br>
 
  <div class="nav">
     <ul class="nav__list">
+        <li class="nav__item"><a href="html/info.html"class="nav__link">Meer info</a> </li>
        <li class="nav__item"><a href="#" class="nav__link">Prijs</a></li>
        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
        <li class="nav__item"><a href="#adres" class="nav__link">Adres</a></li>
@@ -43,7 +48,7 @@
 <div class="container">
    
 <div class="voorstelling">
-    <h3 class="heading3">Wie ben ik?</h3>
+    <h3 class="heading3">Wat doe ik?</h3>
    <div class="voorstelling__text">
     Soms bereiken mensen een godelijk niveau. met andere woorden u kunt zelf u god zijn. Zo zijn er meerdere 
     geweest. Maar slechts 2 die bekend zijn: Jezus, universele liefde en Vasishta, Universele niets. 
@@ -66,23 +71,23 @@
 <form  action="#" class="afspraak__form">
     <h3 class="heading3">Afspraak maken</h3>
 
-    <label for="voornaam">Uw voornaam</label>
+    <label class="afspraak__form-text" for="voornaam">Uw voornaam</label>
     <input type="text" id="voornaam" name="naam" class="afspraak__form-invoer" required>
     
-    <label for="naam">Uw achternaam</label>
+    <label class="afspraak__form-text" for="naam">Uw achternaam</label>
     <input type="text" id="naam" name="naam" class="afspraak__form-invoer" required>
 
 
-    <label for="tel">Uw telefoonnummer</label>
+    <label class="afspraak__form-text" for="tel">Uw telefoonnummer</label>
     <input type="tel" id="tel" name="tel" class="afspraak__form-invoer" required>
 
-    <label for="mail">Uw email</label>
+    <label class="afspraak__form-text" for="mail">Uw email</label>
     <input type="email" id="mail" name="email" class="afspraak__form-invoer" required>
 
-    <label for="Datum">Datum afspraak</label>
+    <label class="afspraak__form-text" for="Datum">Datum afspraak</label>
     <input type="date" class="afspraak__form-invoer">
 
-    <label for="vraag">Eventuele vragen</label>
+    <label class="afspraak__form-text" for="vraag">Eventuele vragen</label>
     <textarea class="afspraak__form-invoer" name="vraag" id="vraag" ></textarea>
 
     <button class="btn">Verzenden</button>
