@@ -154,7 +154,9 @@ body {
     @media only screen and (max-width: 37.5em) {
       .voorstelling__text {
         width: 100%;
-        font-size: 1.8rem; } }
+        font-size: 1.8rem;
+        background-attachment: scroll;
+        background-size: cover; } }
     .voorstelling__text-img1 {
       margin-left: -15rem;
       background-image: linear-gradient(to right top, rgba(202, 68, 27, 0.6), rgba(62, 118, 170, 0.6)), url(../img/yingyang.jpg);
@@ -318,3 +320,4 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
