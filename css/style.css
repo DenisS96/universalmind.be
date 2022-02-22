@@ -100,12 +100,14 @@ body {
     opacity: 0; } }
 
 .title {
+    z-index:1;
   text-align: center;
   font-size: 7rem;
   font-family: 'The Nautigal', cursive;
   text-shadow: 0 1rem 1.2rem rgba(0, 0, 0, 0.4);
   animation: appear 11s ease-in; }
   .title__sub {
+    z-index:1;
     float: right;
     margin-bottom: 2rem;
     margin-right: 4%;
@@ -113,6 +115,7 @@ body {
     font-size: 2.5rem;
     animation: moveInRight 8s 8s backwards; }
   .title__sub2 {
+     z-index:1;
     margin-left: 20%;
     font-family: 'The Nautigal', cursive;
     text-align: center;
@@ -123,7 +126,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
   opacity: .4;
   overflow: hidden; }
   @media only screen and (max-width: 37.5em) {
